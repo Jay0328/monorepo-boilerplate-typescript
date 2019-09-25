@@ -1,0 +1,15 @@
+{
+  "name": "monorepo-boilerplate-typescript",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "Jay Chen <gcobs135102@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "bootstrap": "lerna bootstrap"
+  },
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  }
+}
