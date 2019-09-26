@@ -9,11 +9,11 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build:clean": "lerna run build:clean --stream --parallel",
-    "build:tsc": "tsc -b tsconfig.app.json",
     "build": "lerna run build --stream --sort"
   },
   "devDependencies": {
     "lerna": "^3.16.4",
+    "rollup": "^1.21.4",
     "typescript": "^3.6.3"
   }
 }

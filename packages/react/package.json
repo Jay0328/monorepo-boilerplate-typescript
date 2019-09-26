@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "author": "Jay Chen <gcobs135102@gmail.com>",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
   "module": "./esm/index.js",
   "jsnext:main": "./esm/index.js",
-  "typings": "esm/index.d.ts",
+  "typings": "./esm/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "build:clean": "rm -rf ./{esm,lib} && rm -rf ./tsconfig.tsbuildinfo",
-    "build": "tsc"
+    "build": "tsc && rollup --config rollup.config.js"
   },
   "peerDependencies": {
     "@jay-mono-ts/core": "^0.0.0",
