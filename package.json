@@ -7,9 +7,13 @@
   "author": "Jay Chen <gcobs135102@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "build:clean": "lerna run build:clean --stream --parallel",
+    "build:tsc": "tsc -b tsconfig.app.json",
+    "build": "lerna run build --stream --sort"
   },
   "devDependencies": {
-    "lerna": "^3.16.4"
+    "lerna": "^3.16.4",
+    "typescript": "^3.6.3"
   }
 }
