@@ -73,6 +73,14 @@
 					}
 				]
 			}
+		},
+		{
+			"files": [
+				"./**/*.test{.ts,.tsx}"
+			],
+			"rules": {
+				"@typescript-eslint/ban-ts-ignore": 0
+			}
 		}
 	]
 }
