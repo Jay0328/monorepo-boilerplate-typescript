@@ -1,6 +1,6 @@
 {
   "name": "@jay-mono-ts/core",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Jay Chen <gcobs135102@gmail.com>",
   "license": "MIT",
   "main": "./lib/index.js",

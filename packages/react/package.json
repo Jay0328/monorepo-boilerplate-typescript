@@ -1,6 +1,6 @@
 {
   "name": "@jay-mono-ts/react",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Jay Chen <gcobs135102@gmail.com>",
   "license": "MIT",
   "main": "./lib/index.js",
@@ -23,7 +23,7 @@
     "react": "^16.9.0"
   },
   "devDependencies": {
-    "@jay-mono-ts/core": "^0.0.0",
+    "@jay-mono-ts/core": "^0.0.1",
     "@types/react": "^16.9.3",
     "react": "^16.9.0"
   }
