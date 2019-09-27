@@ -10,11 +10,22 @@
     "bootstrap": "lerna bootstrap",
     "build:clean": "lerna run build:clean --stream --parallel",
     "build": "lerna run build --stream --sort",
-    "lint": "eslint . --config .eslintrc --ext .js,.ts,.tsx"
+    "lint": "eslint . --config .eslintrc --ext .js,.ts,.tsx",
+    "commit": "git-cz",
+    "release": "standard-version",
+    "version": "lerna version --conventional-commits --no-push",
+    "publish": "lerna publish --from-git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.3.1",
     "@typescript-eslint/parser": "^2.3.1",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
@@ -26,6 +37,7 @@
     "lint-staged": "^9.4.0",
     "prettier": "^1.18.2",
     "rollup": "^1.21.4",
+    "standard-version": "^7.0.0",
     "typescript": "^3.6.3"
   }
 }
