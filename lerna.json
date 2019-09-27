@@ -6,13 +6,13 @@
   "useWorkspaces": true,
   "version": "0.0.0",
   "command": {
-    "publish": {
+    "version": {
       "ignoreChanges": [
         "**/__fixtures__/**",
         "**/__tests__/**",
         "**/*.md"
       ],
-      "message": "chore: publish"
+      "message": "chore(release): %v"
     }
   }
 }
