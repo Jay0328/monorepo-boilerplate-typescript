@@ -32,7 +32,7 @@
 	"overrides": [
 		{
 			"files": [
-				"./packages/**/*{.js,.jsx}"
+				"./**/*{.js,.jsx}"
 			],
 			"rules": {
 				"no-unused-vars": [
@@ -47,7 +47,7 @@
 		},
 		{
 			"files": [
-				"./packages/**/*{.ts,.tsx}"
+				"./**/*{.ts,.tsx}"
 			],
 			"extends": [
 				"prettier/@typescript-eslint",
