@@ -1,3 +1,1 @@
-export class MonoModule {
-  constructor(public name: string) {}
-}
+export { MonoModule } from './mono.module';

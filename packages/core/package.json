@@ -13,6 +13,8 @@
   },
   "scripts": {
     "build:clean": "rm -rf ./{esm,lib} && rm -rf ./tsconfig.tsbuildinfo",
-    "build": "tsc && rollup --config rollup.config.js"
+    "build": "tsc && rollup --config rollup.config.js",
+    "test:clean": "rm -rf ./coverage",
+    "test": "jest --coverage --config=jest.config.js"
   }
 }
