@@ -1,0 +1,9 @@
+node_modules/
+coverage/
+src/
+
+jest.config.jest
+rollup.config.js
+tsconfig.json
+tsconfig.test.json
+tsconfig.tsbuildinfo
