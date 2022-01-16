@@ -20,11 +20,6 @@
     "version": "lerna version --conventional-commits --no-push",
     "publish": "lerna publish --from-git"
   },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
   "devDependencies": {
     "@commitlint/cli": "^16.0.2",
     "@commitlint/config-conventional": "^16.0.0",
@@ -35,8 +30,8 @@
     "@types/react-is": "^16.7.1",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
-    "commitizen": "^4.0.3",
-    "cz-conventional-changelog": "^3.0.2",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.18.2",
@@ -53,7 +48,6 @@
     "react-is": "^16.12.0",
     "react-test-renderer": "^16.12.0",
     "rollup": "^1.27.5",
-    "standard-version": "^7.0.0",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.2"
   }
