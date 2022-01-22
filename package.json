@@ -21,7 +21,7 @@
     "publish": "lerna publish --from-git"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.0.2",
+    "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
     "@types/jest": "^27.4.0",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
