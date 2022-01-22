@@ -16,7 +16,6 @@
     "strict": true,
     "sourceMap": true,
     "composite": true,
-    "jsx": "react",
     "lib": [
       "dom",
       "dom.iterable",
@@ -28,7 +27,7 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "@jay-mono-ts/*": ["./packages/*/src"]
+      "@mono/*": ["./packages/*/src"]
     }
   }
 }
