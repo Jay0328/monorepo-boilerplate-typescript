@@ -4,7 +4,7 @@ export function getExternalFromPackages(...pkgs) {
       (prev, pkg) => ({
         ...prev,
         ...pkg.dependencies,
-        ...pkg.peerDependencies
+        ...pkg.peerDependencies,
       }),
       {}
     )

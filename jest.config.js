@@ -4,17 +4,17 @@ module.exports = {
     /**
      * Since `<rootDir>` will be packages/*.
      */
-    '@jay-mono-ts/(.*)$': '<rootDir>/../$1'
+    '@mono/(.*)$': '<rootDir>/../$1',
   },
   transform: {
-    '\\.t(s|sx)$': 'ts-jest'
+    '\\.t(s|sx)$': 'ts-jest',
   },
   testMatch: ['**/__tests__/**/*.test.*'],
   globals: {
     'ts-jest': {
-      tsConfig: 'tsconfig.test.json'
-    }
+      tsConfig: 'tsconfig.test.json',
+    },
   },
   testPathIgnorePatterns: ['/node_modules/'],
-  coveragePathIgnorePatterns: ['/node_modules/']
+  coveragePathIgnorePatterns: ['/node_modules/'],
 };

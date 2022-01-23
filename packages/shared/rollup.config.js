@@ -7,9 +7,9 @@ export default [
     output: [
       {
         file: './lib/index.js',
-        format: 'cjs'
-      }
+        format: 'cjs',
+      },
     ],
-    external: getExternalFromPackages(pkg)
-  }
+    external: getExternalFromPackages(pkg),
+  },
 ];
