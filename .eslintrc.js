@@ -5,29 +5,13 @@ module.exports = {
     node: true,
     es6: true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
-    'plugin:prettier/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
+  extends: ['eslint:recommended', 'plugin:import/recommended', 'plugin:prettier/recommended'],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
-    project: './tsconfig.*?.json',
     ecmaFeatures: {
       jsx: true,
       legacyDecorators: true,
-    },
-  },
-  settings: {
-    'import/resolver': {
-      typescript: {
-        alwaysTryTypes: true,
-        project: ['tsconfig.json', 'packages/*/tsconfig.json'],
-      },
     },
   },
   overrides: [
@@ -46,6 +30,23 @@ module.exports = {
     },
     {
       files: ['**/*{.ts,.tsx}'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: ['tsconfig.json', 'packages/*/tsconfig.json'],
+      },
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:import/typescript',
+      ],
+      settings: {
+        'import/resolver': {
+          typescript: {
+            alwaysTryTypes: true,
+            project: ['tsconfig.json', 'packages/*/tsconfig.json'],
+          },
+        },
+      },
       rules: {
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/no-unused-vars': [
