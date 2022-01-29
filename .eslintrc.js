@@ -6,6 +6,7 @@ module.exports = {
     es6: true,
   },
   extends: ['eslint:recommended', 'plugin:import/recommended', 'plugin:prettier/recommended'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
@@ -30,7 +31,6 @@ module.exports = {
     },
     {
       files: ['**/*{.ts,.tsx}'],
-      parser: '@typescript-eslint/parser',
       parserOptions: {
         project: ['tsconfig.json', 'packages/*/tsconfig.json'],
       },
