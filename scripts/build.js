@@ -11,7 +11,7 @@ const {
   tsconfigPath,
   repoPath,
 } = require('./packageInfos');
-const { cleanBuild, rollupBuild, getFilesByGlob } = require('./buildUtils');
+const { cleanBuild, rollupBuild, getFilesByGlob, mergeCommonRollupOutputConfig } = require('./buildUtils');
 
 build();
 
@@ -49,13 +49,13 @@ async function build() {
     input,
     external: (id) => externals.some((ext) => id.startsWith(ext)),
     output: [
-      {
+      mergeCommonRollupOutputConfig({
         dir: packageDistPath,
         externalLiveBindings: false,
         format: 'es',
         preserveModules: true,
         preserveModulesRoot: packageSrcPath,
-      },
+      }),
     ],
     plugins: [
       ts({

@@ -5,7 +5,7 @@ const { rollup } = require('rollup');
 const chalk = require('chalk');
 const { gzipSync } = require('zlib');
 const { compress } = require('brotli');
-const { packageDistPath, packageNodeModulesPath } = require('./packageInfos');
+const { packageDistPath, packageNodeModulesPath, packageJson } = require('./packageInfos');
 
 function getFilesByGlob(globPath) {
   return new Promise((resolve, reject) => {
@@ -17,6 +17,17 @@ function getFilesByGlob(globPath) {
       resolve(files);
     });
   });
+}
+
+function mergeCommonRollupOutputConfig(config) {
+  return {
+    banner: `/**
+ * ${packageJson.name} v${packageJson.version}
+ * (c) ${new Date().getFullYear()} Jay Chen
+ * @license MIT
+ */`,
+    ...config,
+  };
 }
 
 async function rollupBuild({ output, ...options }) {
@@ -69,6 +80,7 @@ function checkFileSize(filePath) {
 
 module.exports = {
   getFilesByGlob,
+  mergeCommonRollupOutputConfig,
   rollupBuild,
   cleanBuild,
   checkPackageSize,
