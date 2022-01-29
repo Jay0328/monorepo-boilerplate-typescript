@@ -4,8 +4,10 @@ module.exports = {
   },
   globals: {
     'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.spec.json',
+      tsconfig: '<rootDir>/../../tsconfig.json',
     },
+    __DEV__: true,
+    __VERSION__: require('./package.json').version,
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   moduleNameMapper: {

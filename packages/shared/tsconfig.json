@@ -1,5 +1,0 @@
-{
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {},
-  "references": [{ "path": "./tsconfig.dev.json" }, { "path": "./tsconfig.spec.json" }]
-}

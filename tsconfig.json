@@ -6,5 +6,7 @@
     "paths": {
       "@mono/*": ["packages/*/src"]
     }
-  }
+  },
+  "include": ["packages/global.d.ts", "packages/*/src", "**/*.spec.*"],
+  "exclude": ["node_modules"]
 }

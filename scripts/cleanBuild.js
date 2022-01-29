@@ -1,3 +1,6 @@
-const { cleanBuild } = require('./buildUtils');
+const Package = require('./package');
+const PackageBuilder = require('./packageBuilder');
 
-cleanBuild();
+const pkg = new Package(process.env.PWD);
+
+new PackageBuilder(pkg).clean();
