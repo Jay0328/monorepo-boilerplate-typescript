@@ -17,9 +17,9 @@
     "test": "lerna run test --stream --sort",
     "commit": "git-cz",
     "postinstall": "husky install",
-    "release": "standard-version",
     "version": "lerna version",
-    "publish": "lerna publish --from-package"
+    "postversion": "yarn build",
+    "release": "lerna publish --from-package"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
