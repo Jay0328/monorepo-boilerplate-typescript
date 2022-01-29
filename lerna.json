@@ -1,18 +1,18 @@
 {
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "npmClient": "yarn",
+  "npmClientArgs": ["--no-lockfile"],
   "useWorkspaces": true,
   "version": "0.0.1",
   "command": {
     "version": {
-      "ignoreChanges": [
-        "**/__fixtures__/**",
-        "**/__tests__/**",
-        "**/*.md"
-      ],
-      "message": "chore(release): %v"
+      "ignoreChanges": ["**/__fixtures__/**", "**/__tests__/**", "**/*.{spec,test}.{js,jsx,ts,tsx}", "**/*.md"],
+      "message": "chore(release): %s",
+      "conventionalCommits": true,
+      "yes": true
+    },
+    "publish": {
+      "contents": "dist"
     }
   }
 }

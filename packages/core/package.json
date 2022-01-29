@@ -3,18 +3,17 @@
   "version": "0.0.1",
   "author": "Jay Chen <gcobs135102@gmail.com>",
   "license": "MIT",
-  "main": "./lib/index.js",
-  "module": "./esm/index.js",
-  "jsnext:main": "./esm/index.js",
-  "typings": "./esm/index.d.ts",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "clean": "yarn build:clean && yarn test:clean",
-    "build:clean": "rm -rf ./{esm,lib} && rm -rf ./tsconfig.tsbuildinfo",
-    "build": "tsc && rollup --config rollup.config.js",
+    "build:clean": "node ../../scripts/cleanBuild.js",
+    "build": "node ../../scripts/build.js",
     "test:clean": "rm -rf ./coverage",
     "test": "jest --coverage --config=jest.config.js"
   },
