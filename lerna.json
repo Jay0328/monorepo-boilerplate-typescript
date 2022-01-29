@@ -9,6 +9,7 @@
       "ignoreChanges": ["**/*.{spec,test}.{js,jsx,ts,tsx}", "**/*.md"],
       "conventionalCommits": true,
       "message": "chore(release): %s",
+      "push": false,
       "yes": true
     },
     "publish": {

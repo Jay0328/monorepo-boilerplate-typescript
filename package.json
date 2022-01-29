@@ -18,7 +18,7 @@
     "commit": "git-cz",
     "postinstall": "husky install",
     "release": "standard-version",
-    "version": "lerna version --no-push",
+    "version": "lerna version",
     "publish": "lerna publish --from-package"
   },
   "devDependencies": {
