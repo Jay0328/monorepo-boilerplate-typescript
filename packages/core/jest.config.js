@@ -1,5 +1,4 @@
-const rootConfig = require('../../jest.config');
-
 module.exports = {
-  ...rootConfig,
+  name: 'core',
+  preset: '../../jest.config.js',
 };

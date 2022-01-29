@@ -1,5 +1,1 @@
-import { version } from '@mono/shared';
-
-export function someCoreLogic() {
-  return version.split('.');
-}
+export { someCoreLogic } from './someCoreLogic';

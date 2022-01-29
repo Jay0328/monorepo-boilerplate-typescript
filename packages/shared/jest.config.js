@@ -1,5 +1,4 @@
-const rootConfig = require('../../jest.config');
-
 module.exports = {
-  ...rootConfig,
+  name: 'shared',
+  preset: '../../jest.config.js',
 };

@@ -14,7 +14,7 @@
     "format": "prettier './**/*.{json,md}' --write",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "test:clean": "lerna run test:clean --stream --parallel",
-    "test": "lerna run test --stream",
+    "test": "lerna run test --stream --sort",
     "commit": "git-cz",
     "postinstall": "husky install",
     "release": "standard-version",

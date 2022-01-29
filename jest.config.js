@@ -1,20 +1,21 @@
 module.exports = {
+  transform: {
+    '^.+\\.[tj]s$': 'ts-jest',
+  },
+  globals: {
+    'ts-jest': {
+      tsconfig: '<rootDir>/tsconfig.spec.json',
+    },
+  },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   moduleNameMapper: {
     /**
      * Since `<rootDir>` will be packages/*.
      */
-    '@mono/(.*)$': '<rootDir>/../$1',
+    '^@mono/(.*?)$': '<rootDir>/../$1/src',
   },
-  transform: {
-    '\\.t(s|sx)$': 'ts-jest',
-  },
-  testMatch: ['**/__tests__/**/*.test.*'],
-  globals: {
-    'ts-jest': {
-      tsConfig: 'tsconfig.test.json',
-    },
-  },
+  testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
+  testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/'],
   coveragePathIgnorePatterns: ['/node_modules/'],
 };
