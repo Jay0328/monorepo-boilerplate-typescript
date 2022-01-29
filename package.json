@@ -18,8 +18,8 @@
     "commit": "git-cz",
     "postinstall": "husky install",
     "release": "standard-version",
-    "version": "lerna version --conventional-commits --no-push",
-    "publish": "lerna publish --from-git"
+    "version": "lerna version --no-push",
+    "publish": "lerna publish --from-package"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",

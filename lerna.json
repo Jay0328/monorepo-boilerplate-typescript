@@ -6,9 +6,9 @@
   "version": "0.0.1",
   "command": {
     "version": {
-      "ignoreChanges": ["**/__fixtures__/**", "**/__tests__/**", "**/*.{spec,test}.{js,jsx,ts,tsx}", "**/*.md"],
-      "message": "chore(release): %s",
+      "ignoreChanges": ["**/*.{spec,test}.{js,jsx,ts,tsx}", "**/*.md"],
       "conventionalCommits": true,
+      "message": "chore(release): %s",
       "yes": true
     },
     "publish": {
