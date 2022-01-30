@@ -32,7 +32,7 @@ module.exports = {
     {
       files: ['**/*{.ts,.tsx}'],
       parserOptions: {
-        project: ['tsconfig.json', 'packages/*/tsconfig.json'],
+        project: ['tsconfig.json'],
       },
       extends: [
         'plugin:@typescript-eslint/recommended',
@@ -43,7 +43,7 @@ module.exports = {
         'import/resolver': {
           typescript: {
             alwaysTryTypes: true,
-            project: ['tsconfig.json', 'packages/*/tsconfig.json'],
+            project: ['tsconfig.json'],
           },
         },
       },
