@@ -48,6 +48,37 @@ module.exports = {
         },
       },
       rules: {
+        'import/dynamic-import-chunkname': [
+          'error',
+          {
+            importFunctions: ['dynamicImport'],
+            webpackChunknameFormat: '[a-z0-57-9-/_]+',
+          },
+        ],
+        'import/first': 'error',
+        'import/newline-after-import': 'error',
+        'import/no-deprecated': 'error',
+        'import/no-duplicates': ['error', { considerQueryString: true }],
+        'import/no-dynamic-require': 'error',
+        'import/no-useless-path-segments': [
+          'error',
+          {
+            noUselessIndex: true,
+          },
+        ],
+        'import/order': [
+          'error',
+          {
+            groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
+            warnOnUnassignedImports: true,
+          },
+        ],
+        '@typescript-eslint/no-empty-interface': [
+          'error',
+          {
+            allowSingleExtends: true,
+          },
+        ],
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/no-unused-vars': [
           2,
