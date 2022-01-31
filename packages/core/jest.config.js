@@ -1,4 +1,4 @@
 module.exports = {
-  name: 'core',
+  displayName: 'core',
   preset: '../../jest.config.js',
 };

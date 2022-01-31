@@ -1,4 +1,4 @@
 module.exports = {
-  name: 'shared',
+  displayName: 'shared',
   preset: '../../jest.config.js',
 };
